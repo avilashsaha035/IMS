@@ -24,9 +24,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //========================= Products ==============================//
-Route::get('/', [ProductController::class, 'index'])->name('product.show');              //read or view
+Route::get('/home', [ProductController::class, 'show'])->name('product.show');              //read or view
 Route::post('/product/insert', [ProductController::class, 'insert'])->name('product.insert');        //insert
 Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');          //edit
-Route::post('/product/update', [ProductController::class, 'update'])->name('product.update');        //update
+Route::post('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');        //update
 Route::get('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');    //delete
 
