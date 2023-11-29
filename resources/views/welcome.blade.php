@@ -6,16 +6,16 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h1 class="text-center text-success fw-bold">Add Products</h1>
+                    <h1 class="text-center text-success fw-bold">Welcome to Inventory Management System</h1>
                 </div>
                 <div class="card-body">
                     @if (Route::has('login'))
                         @auth
-
+                            <h2 class="text-center text-success fw-bold">Add Products</h2>
                             <form action="{{ route('product.insert') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                                <label for="exampleInputEmail1" class="form-label fw-bold">Name</label>
                                 <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 <span class="text-danger">
                                     @error('name')
@@ -24,7 +24,7 @@
                                 </span>
                                 </div>
                                 <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Quantity</label>
+                                <label for="exampleInputPassword1" class="form-label fw-bold">Quantity</label>
                                 <input type="number" name="quantity" class="form-control" id="exampleInputPassword1">
                                 <span class="text-danger">
                                     @error('quantity')
@@ -33,7 +33,7 @@
                                 </span>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Price</label>
+                                    <label for="exampleInputPassword1" class="form-label fw-bold">Price</label>
                                     <input type="number" name="price" class="form-control" id="exampleInputPassword1">
                                     <span class="text-danger">
                                         @error('price')
