@@ -16,12 +16,12 @@
 
 ### Login Credential
 
-Email: avilash@test.com.
+Email: avilash@test.com,
 Password: 12345678.
 
 
 
 
-## That's it! Thank you.
+### That's it! Thank you.
 
 
