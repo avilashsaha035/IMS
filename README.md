@@ -12,13 +12,16 @@
 4. Then write the command "php artisan serve" and then "npm run dev" on the cmd console.  
  
 5. Go to your browser and type "localhost:8000" to run this project.
+   
 
 ### Login Credential
 
-Email: avilash@test.com
-Password: 12345678
+Email: avilash@test.com.
+Password: 12345678.
 
 
-That's it! Thank you.
+
+
+## That's it! Thank you.
 
 
