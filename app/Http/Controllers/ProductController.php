@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Product;
+use Illuminate\Support\Facades\Redirect;
 
 
 class ProductController extends Controller
@@ -20,14 +21,13 @@ class ProductController extends Controller
     public function insert(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:50',
+            'name' => 'required|regex:[a-zA-Z]|max:50',
             'quantity' => 'required|numeric',
             'price' => 'required|numeric',
         ]);
 
         if ($validator->fails()) {
-            // return response()->json(['errors' => $validator->errors()]);
-            return $validator->errors();
+            return Redirect::back()->withErrors($validator);
         }else{
             $products = new Product();
 
