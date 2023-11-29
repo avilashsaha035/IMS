@@ -13,6 +13,11 @@
  
 5. Go to your browser and type "localhost:8000" to run this project.
 
+### Login Credential
+
+Email: avilash@test.com
+Password: 12345678
+
 
 That's it! Thank you.
 
