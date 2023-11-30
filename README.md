@@ -5,15 +5,25 @@
 1. start your XAMPP or WampServer
 
 2. Go to phpmyadmin and create a database with this name "ims" and import the .sql file into it. 
-   You can find .sql file in this project folder named "ims.sql" 
+   You can find .sql file in this project folder named "ims.sql"
+   
+4. Open your code editor and open project folder. Then create .env file from .env.example.
 
-3. Then go to project folder and run cmd for this folder.
+5. In your cmd prompt run "composer update" and after that run "php artisan key:generate" command.
 
-4. Then write the command "php artisan serve" and then "npm run dev" on the cmd console.  
- 
-5. Go to your browser and type "localhost:8000" to run this project.
+6. Then write the command "php artisan serve" and then "npm run dev" on the cmd console.
+
+7. Go to your browser and type "localhost:8000" to run this project.
+   
+
+### Login Credential
+
+Email: avilash@test.com,
+Password: 12345678.
 
 
-That's it! Thank you.
+
+
+### That's it! Thank you.
 
 
