@@ -21,7 +21,7 @@ class ProductController extends Controller
     public function insert(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|regex:[a-zA-Z]|max:50',
+            'name' => 'required|regex:([a-zA-Z\s]$)|max:50',
             'quantity' => 'required|numeric',
             'price' => 'required|numeric',
         ]);

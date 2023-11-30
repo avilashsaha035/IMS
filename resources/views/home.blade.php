@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-center"><h1>{{ __('All Products') }}</h1></div>
+                <div class="card-header text-center text-dark"><h1 class="fw-bold">{{ __('All Products') }}</h1></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -19,7 +19,7 @@
                     <div class="col-lg-3"></div>
                         <a href="{{ url('/') }}" class="btn btn-success float-end">Add Product <i class="las la-plus"></i></a>
                             <div class="cl-lg-6">
-                                <table class="table table-hover" style="border-style:solid; border-color: black;">
+                                <table class="table table-hover" style="border-style:solid; border-color: #000000;">
                                     <thead>
                                       <tr>
                                         <th scope="col" class="text-center">Name</th>
