@@ -19,17 +19,17 @@
                     <div class="col-lg-3"></div>
                         <a href="{{ url('/') }}" class="btn btn-success float-end">Add Product <i class="las la-plus"></i></a>
                             <div class="cl-lg-6">
-                                <table class="table table-hover" style="border-style:solid; border-color: #000000;">
+                                <table class="table table-bordered data-table" style="border-style:solid; border-color: #000000;">
                                     <thead>
                                       <tr>
-                                        <th scope="col" class="text-center">Name</th>
-                                        <th scope="col" class="text-center">Quantity</th>
-                                        <th scope="col" class="text-center">Price</th>
-                                        <th scope="col" class="text-center">Action</th>
+                                        <th>Name</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th width="100px">Action</th>
                                       </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($products as $item)
+                                        {{-- @foreach ($products as $item)
                                         <tr>
                                             <td class="text-center">{{ $item->name }}</td>
                                             <td class="text-center">{{ $item->quantity }}</td>
@@ -39,7 +39,7 @@
                                                 <a href="{{ url('/product/delete/'.$item->id) }}" type="button" class="btn btn-danger"> <i class="las la-trash"></i> </a>
                                             </td>
                                         </tr>
-                                        @endforeach
+                                        @endforeach --}}
                                     </tbody>
                                 </table>
                             </div>

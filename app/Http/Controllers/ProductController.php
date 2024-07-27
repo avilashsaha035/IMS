@@ -2,19 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 
 class ProductController extends Controller
 {
     //View Product
-    public function show()
+    public function show(Request $request)
     {
-        $products = Product::all();
-        return view('home',compact('products'));
+        if($request->ajax()){
+            $products = Product::all();
+            return DataTables::of($products)
+                ->addIndexColumn()
+                ->addColumn('action', function($row){
+                    $btn = '<a href="" type="button" class="btn btn-success"> <i class="las la-pen"></i> </a>';
+                    $btn .= '<a href="" type="button" class="btn btn-danger"> <i class="las la-trash"></i> </a>';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('home');
     }
 
     //Insert Product
