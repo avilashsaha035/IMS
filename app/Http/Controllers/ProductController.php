@@ -19,8 +19,10 @@ class ProductController extends Controller
             return DataTables::of($products)
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
-                    $btn = '<a href="" type="button" class="btn btn-success"> <i class="las la-pen"></i> </a>';
-                    $btn .= '<a href="" type="button" class="btn btn-danger"> <i class="las la-trash"></i> </a>';
+                    $edit_url = url('/product/edit/'.$row->id);
+                    $delete_url = url('/product/delete/'.$row->id);
+                    $btn = '<a href="'.$edit_url.'" type="button" class="btn btn-success"> <i class="las la-pen"></i> </a>';
+                    $btn .= '<a href="'.$delete_url.'" type="button" class="btn btn-danger"> <i class="las la-trash"></i> </a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
